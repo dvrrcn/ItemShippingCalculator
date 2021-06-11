@@ -47,21 +47,12 @@ int main()
     cout << setw(WIDTH) << ' ' << endl;
     cout << "\n";
 
-    //output the same content as above to the FILE and not to the console
-    writeFile << setfill('.') << setw(WIDTH) << ' ' << endl; // fills the spaces with asterisks
-    writeFile << setprecision(2) << fixed;
-    writeFile << STR1;
-    writeFile << setw(WIDTH) << ' ' << endl;
-    writeFile << "\n";
-
     //subtracts the string length from the width to keep the alignment pretty
-    writeFile << STR2 << setw(WIDTH - STR2.length()) << ":";
     cout << STR2 << setw(WIDTH - STR2.length()) << ":";
     cin >> itemName;
     //transforms the string into uppercase
     transform(itemName.begin(), itemName.end(), itemName.begin(), toupper);
 
-    writeFile << STR3 << setw(WIDTH - STR3.length()) << ":";
     cout << STR3 << setw(WIDTH - STR3.length()) << ":";
     cin >> isFragile;
     transform(isFragile.begin(), isFragile.end(), isFragile.begin(), toupper);
@@ -76,11 +67,9 @@ int main()
         return 0;
     }
 
-    writeFile << STR4 << setw(WIDTH - STR4.length()) << ":";
     cout << STR4 << setw(WIDTH - STR4.length()) << ":";
     cin >> fOrderTotal;
 
-    writeFile << STR5 << setw(WIDTH - STR5.length()) << ":";
     cout << STR5 << setw(WIDTH - STR5.length()) << ":";
     cin >> destination;
     transform(destination.begin(), destination.end(), destination.begin(), toupper);
